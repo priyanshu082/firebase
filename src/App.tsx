@@ -3,7 +3,8 @@ import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
 import './App.css';
 import { Login } from './Pages/login';
 import { Main } from './Pages/main';
-import {Navbar} from "./components/navbar"
+import { Navbar } from "./components/navbar"
+import { CreatePost } from './Pages/create-post/create-post';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main/>}/>
           <Route path="/login" element={<Login/>}/>
+          <Route path="/createpost" element={<CreatePost/>}/>
         </Routes>
       </Router>
     </div>

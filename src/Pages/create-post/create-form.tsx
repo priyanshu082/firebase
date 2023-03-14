@@ -30,14 +30,14 @@ const {register,handleSubmit, formState:{ errors }}=useForm<CreateFormData>({
 
 const postref=collection(db,"posts");
 
-
 const onCreatePost=async(data:CreateFormData)=>{
      console.log(data)
     await addDoc(postref,{
+        
         title:data.title,
-        decription:data.description,
+        description:data.description,
         username:user?.displayName,
-        id:user?.uid
+        userId:user?.uid
     })
     navigate("/")
 }
